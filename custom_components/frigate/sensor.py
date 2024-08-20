@@ -112,7 +112,7 @@ class FrigateFpsSensor(FrigateEntity, CoordinatorEntity):  # type: ignore[misc]
         """Construct a FrigateFpsSensor."""
         FrigateEntity.__init__(self, config_entry)
         CoordinatorEntity.__init__(self, coordinator)
-        self._attr_entity_registry_enabled_default = False
+        self._attr_entity_registry_enabled_default = True
 
     @property
     def unique_id(self) -> str:
@@ -167,7 +167,7 @@ class FrigateStatusSensor(FrigateEntity, CoordinatorEntity):  # type: ignore[mis
         """Construct a FrigateStatusSensor."""
         FrigateEntity.__init__(self, config_entry)
         CoordinatorEntity.__init__(self, coordinator)
-        self._attr_entity_registry_enabled_default = False
+        self._attr_entity_registry_enabled_default = True
 
     @property
     def unique_id(self) -> str:
@@ -213,7 +213,7 @@ class DetectorSpeedSensor(FrigateEntity, CoordinatorEntity):  # type: ignore[mis
         FrigateEntity.__init__(self, config_entry)
         CoordinatorEntity.__init__(self, coordinator)
         self._detector_name = detector_name
-        self._attr_entity_registry_enabled_default = False
+        self._attr_entity_registry_enabled_default = True
 
     @property
     def unique_id(self) -> str:
@@ -281,7 +281,7 @@ class GpuLoadSensor(FrigateEntity, CoordinatorEntity):  # type: ignore[misc]
         self._attr_name = f"{get_friendly_name(self._gpu_name)} gpu load"
         FrigateEntity.__init__(self, config_entry)
         CoordinatorEntity.__init__(self, coordinator)
-        self._attr_entity_registry_enabled_default = False
+        self._attr_entity_registry_enabled_default = True
 
     @property
     def unique_id(self) -> str:
@@ -349,7 +349,7 @@ class CameraFpsSensor(FrigateEntity, CoordinatorEntity):  # type: ignore[misc]
         CoordinatorEntity.__init__(self, coordinator)
         self._cam_name = cam_name
         self._fps_type = fps_type
-        self._attr_entity_registry_enabled_default = False
+        self._attr_entity_registry_enabled_default = True
 
     @property
     def unique_id(self) -> str:
@@ -581,7 +581,7 @@ class DeviceTempSensor(FrigateEntity, CoordinatorEntity):  # type: ignore[misc]
         self._name = name
         FrigateEntity.__init__(self, config_entry)
         CoordinatorEntity.__init__(self, coordinator)
-        self._attr_entity_registry_enabled_default = False
+        self._attr_entity_registry_enabled_default = True
 
     @property
     def unique_id(self) -> str:
@@ -650,7 +650,7 @@ class CameraProcessCpuSensor(FrigateEntity, CoordinatorEntity):  # type: ignore[
         self._attr_name = f"{self._process_type} cpu usage"
         FrigateEntity.__init__(self, config_entry)
         CoordinatorEntity.__init__(self, coordinator)
-        self._attr_entity_registry_enabled_default = False
+        self._attr_entity_registry_enabled_default = True
 
     @property
     def unique_id(self) -> str:
